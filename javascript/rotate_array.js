@@ -1,5 +1,21 @@
+// while K > 0
+// array pop - remove last element
+// array unshift - add to beginning of array
+//  return that array
+
 function rotateArray(arr, k) {
   // type your code here
+  if (arr === []) {
+    return arr;
+  } 
+
+  while (k >= 1) {
+    let lastChar = arr.pop();
+    arr.unshift(lastChar);
+    k--;
+  }
+
+  return arr;
 }
 
 if (require.main === module) {
